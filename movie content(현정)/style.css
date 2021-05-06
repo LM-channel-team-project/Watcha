@@ -188,18 +188,112 @@ body {
 /* ------------------section2------------------ */
 
 .section2 {
-  width: 91rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section2LeftContainer {
+  width: 63rem;
   background-color: #ffffff;
   margin-top: 4rem;
   border: 1px #e3e3e3 solid;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.section2Contents {
-  width: 88rem;
+.section2LeftContents {
+  width: 60rem;
+}
+
+.section2RightContainer {
+  width: 27rem;
+  margin: 4rem 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section2AdContainer {
+  width: 27rem;
+  height: 25rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  border: 1px #e3e3e3 solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section2GVContainer {
+  width: 27rem;
+  height: 37rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  border: 1px #e3e3e3 solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.adContent {
+  width: 100%;
+  height: 66%;
+  border-bottom: 1px #e3e3e3 solid;
+}
+
+.adTextContent {
+  width: 100%;
+  height: 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adTextContentInner {
+  width: 24rem;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gvContent {
+  width: 24rem;
+  height: 100%;
+}
+
+.gallery {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 1px #e3e3e3 solid;
+}
+
+.galleryImg,
+.videoVideo {
+  width: 50%;
+  height: 8rem;
+}
+
+.video {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 /* .reason {
