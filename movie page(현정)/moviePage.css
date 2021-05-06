@@ -204,10 +204,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .section2LeftContents {
-  width: 60rem;
+  width: 59rem;
 }
 
 .section2RightContainer {
@@ -249,6 +250,7 @@ body {
   width: 100%;
   height: 66%;
   border-bottom: 1px #e3e3e3 solid;
+  border-radius: 10px 10px 0 0;
 }
 
 .adTextContent {
@@ -268,6 +270,27 @@ body {
   justify-content: space-between;
 }
 
+.adDiscription {
+  width: 70%;
+  font-size: 1.2rem;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.GoingToSee {
+  width: 30%;
+  background-color: #ff2f6e;
+  color: #ffffff;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .gvContent {
   width: 24rem;
   height: 100%;
@@ -278,14 +301,20 @@ body {
   height: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   border-bottom: 1px #e3e3e3 solid;
 }
 
-.galleryImg,
-.videoVideo {
+.galleryTitle,
+.videoTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.galleryImg {
   width: 50%;
   height: 8rem;
+  margin-top: 1rem;
 }
 
 .video {
@@ -293,23 +322,37 @@ body {
   height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-/* .reason {
-  width: 100%;
-  height: 20rem;
-} */
+.videoVideo {
+  width: 50%;
+  height: 8rem;
+  margin: 1rem 0 1rem 0;
+}
 
+.videoDiscription {
+  width: 50%;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 기본정보 */
 .basicInfo {
   width: 100%;
-  height: 25rem;
+  height: 22rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
   border-bottom: 1px #e3e3e3 solid;
   letter-spacing: -1px;
+  padding-top: 2rem;
 }
 
 .basicInfoHeader {
@@ -321,7 +364,7 @@ body {
   padding-bottom: 1rem;
 }
 
-.basicInfoHeaderText {
+.smallTitle {
   font-size: 2rem;
   font-weight: bold;
   color: black;
@@ -347,7 +390,7 @@ body {
 .basicInfoSummary {
   width: 100%;
   height: 6.5rem;
-  word-break: break-word;
+  word-break: break-all;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -357,9 +400,106 @@ body {
   font-size: 1.5rem;
   color: #4a535b;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 
+/* 출연/제작 */
 .appearanceProduction {
   width: 100%;
+  height: 27rem;
+  border-bottom: 1px #e3e3e3 solid;
+  padding-top: 2rem;
+}
+
+.production {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  height: 22rem;
+  transition: transform 500ms ease-in-out;
+}
+
+.productionList {
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 1rem;
+}
+
+.productionList > img {
+  width: 5rem;
   height: 5rem;
+  border-radius: 10px;
+  border: 1px #e3e3e3 solid;
+}
+
+.liText {
+  border-top: 1px #e3e3e3 solid;
+  width: 22rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.liName {
+  font-size: 1.5rem;
+}
+
+.liJob {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8c8c8c;
+  padding-top: 0.5rem;
+}
+
+.chevron {
+  visibility: hidden;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px #e3e3e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.fa-chevron-left {
+  transform: translate(-1rem, 12.5rem);
+}
+
+.fa-chevron-right {
+  transform: translate(56.7rem, 12.5rem);
+}
+
+/* 별점 그래프 */
+.graph {
+  border-bottom: 1px #e3e3e3 solid;
+}
+
+/* 코멘트 */
+.coment {
+  border-bottom: 1px #e3e3e3 solid;
+}
+
+/* 이 작품이 담긴 컬렉션 */
+.collection {
+  border-bottom: 1px #e3e3e3 solid;
+}
+
+/* 비슷한 작품 */
+.similarWork {
 }
