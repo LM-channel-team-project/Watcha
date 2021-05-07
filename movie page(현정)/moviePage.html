@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="moviePage.css">
     <script defer src="moviePage.js"></script>
     <title>영화 페이지</title>
@@ -14,9 +16,9 @@
 
         <!-- 페이지 상단 부분 -->
         <section class="section1">
-            <img class='topImg' src="https://picsum.photos/400/200/" alt="이미지가 없습니다">
+            <img class='topImg' src="https://picsum.photos/800/200/" alt="이미지가 없습니다">
             <div class="posterAndInfo">
-                <img class='poster' src="https://picsum.photos/400/200/" alt="포스터가 없습니다">
+                <img class='poster' src="https://picsum.photos/200/400/" alt="포스터가 없습니다">
                 <p class="rankingInfo">예매 순위 개봉 누적 관객</p>
             </div>
             <div class="movieInfoRateBasketEstimate">
@@ -55,8 +57,8 @@
                     <!-- 기본 정보 -->
                     <div class="basicInfo">
                         <div class="basicInfoHeader">
-                            <span class="smallTitle">기본 정보</span>
-                            <span class="seeMore">더보기</span>
+                            <span class="smallTitle basicTitle">기본 정보</span>
+                            <button class="seeMore">더보기</button>
                         </div>
                         <div class="basicInfoMiddle">
                             <span class="bimMovieName">영화제목</span>
@@ -80,54 +82,12 @@
                 
                     <!-- 출연/제작 -->
                     <div class="appearanceProduction">
-                        <div class="chevron">
-                            <i class="fas fa-chevron-right"></i>
-                            <i class="fas fa-chevron-left"></i>
+                        <div class="apChevron chevron">
+                            <i class="fas fa-chevron-right apchRight"></i>
+                            <i class="fas fa-chevron-left apchLeft"></i>
                         </div>
-                        <span class="smallTitle">출연/제작</span>
+                        <span class="smallTitle productionTitle">출연/제작</span>
                         <ul class="production">
-                            <li class="productionList">
-                                <img src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
-                                <div class="liText">
-                                    <div class="liName">이름</div>
-                                    <div class="liJob">직업</div>
-                                </div>
-                            </li>
-                            <li class="productionList">
-                                <img src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
-                                <div class="liText">
-                                    <div class="liName">이름</div>
-                                    <div class="liJob">직업</div>
-                                </div>
-                            </li>
-                            <li class="productionList">
-                                <img src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
-                                <div class="liText">
-                                    <div class="liName">이름</div>
-                                    <div class="liJob">직업</div>
-                                </div>
-                            </li>
-                            <li class="productionList">
-                                <img src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
-                                <div class="liText">
-                                    <div class="liName">이름</div>
-                                    <div class="liJob">직업</div>
-                                </div>
-                            </li>
-                            <li class="productionList">
-                                <img src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
-                                <div class="liText">
-                                    <div class="liName">이름</div>
-                                    <div class="liJob">직업</div>
-                                </div>
-                            </li>
-                            <li class="productionList">
-                                <img src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
-                                <div class="liText">
-                                    <div class="liName">이름</div>
-                                    <div class="liJob">직업</div>
-                                </div>
-                            </li>
                             <li class="productionList">
                                 <img src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
                                 <div class="liText">
@@ -241,25 +201,206 @@
                     <div class="graph">
                         <div class="graphTop">
                             <span class="graphTopLeft smallTitle">별점 그래프</span>
-                            <span class="graphTopRight">평균 ★<br>(몇명)</span>
+                            <span class="graphTopRight">
+                                <span class="average">평균 ★3.9</span>
+                                <span class="numOfPeople">(12만명)</span>
+                            </span>
                         </div>
                     </div>
 
                     <!-- 코멘트 -->
-                    <div class="coment">
-                        <div class="comentTop">
-                            <span class="comentTopLeft smallTitle">코멘트</span>
-                            <span class="comentTopRight">더보기</span>
+                    <div class="comment"> 
+                        <div class="commentChevron chevron">
+                            <i class="fas fa-chevron-right ccchRight"></i>
+                            <i class="fas fa-chevron-left ccchLeft"></i>
+                        </div>         
+                        <div class="commentTop">
+                            <span class="commentTopLeft">
+                                <span class="smallTitle">코멘트</span>
+                                <span class="numOfComment">1000+</span>
+                            </span>
+                            <button class="seeMore">더보기</button>
                         </div>
+                        <ul class="commentContentSpace">              
+                            <li class="commentContentList">
+                                <div class="commentContent">
+                                    <div class="ccTop">
+                                        <span class="ccTopLeft">
+                                            <img class="ccTopImg" src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
+                                            <span class="ccTopName">이름</span>
+                                        </span>
+                                        <span class="ccTopRight">
+                                            <i class="fas fa-star"></i>
+                                            <span class="starScope">3.0</span>
+                                        </span>
+                                    </div>
+                                    <div class="ccText">
+                                        <div class="ccTextInner">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            A modi possimus consectetur veritatis placeat inventore
+                                            id maxime quia adipisci quaerat. Lorem ipsum dolor sit,
+                                        </div>
+                                    </div>
+                                    <div class="ccNumOfLikeComment">
+                                        <span class="ccNumOfLike">
+                                            <i class="fas fa-thumbs-up cci"></i>
+                                            <span class="numOfthumbsUp">182</span>
+                                        </span>
+                                        <span class="ccNumOfComment">
+                                            <i class="fas fa-comment cci"></i>
+                                            <span class="ccComment">2</span>
+                                        </span>
+                                    </div>
+                                    <div class="ccLike">
+                                        <button class="ccLikeBtn">좋아요</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="commentContentList">
+                                <div class="commentContent">
+                                    <div class="ccTop">
+                                        <span class="ccTopLeft">
+                                            <img class="ccTopImg" src="https://picsum.photos/200/200/" alt="이미지가 없습니다">
+                                            <span class="ccTopName">이름</span>
+                                        </span>
+                                        <span class="ccTopRight">
+                                            <i class="fas fa-star"></i>
+                                            <span class="starScope">3.0</span>
+                                        </span>
+                                    </div>
+                                    <div class="ccText">
+                                        <div class="ccTextInner">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            A modi possimus consectetur veritatis placeat inventore
+                                            id maxime quia adipisci quaerat. Lorem ipsum dolor sit,
+                                        </div>
+                                    </div>
+                                    <div class="ccNumOfLikeComment">
+                                        <span class="ccNumOfLike">
+                                            <i class="fas fa-thumbs-up cci"></i>
+                                            <span class="numOfthumbsUp">182</span>
+                                        </span>
+                                        <span class="ccNumOfComment">
+                                            <i class="fas fa-comment cci"></i>
+                                            <span class="ccComment">2</span>
+                                        </span>
+                                    </div>
+                                    <div class="ccLike">
+                                        <button class="ccLikeBtn">좋아요</button>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                    
+                        </ul>
+                               
                     </div>
 
                     <!-- 이 작품이 담긴 컬렉션 -->
                     <div class="collection">
-                        <div class="smallTitle">이 작품이 담긴 컬렉션</div>
+                        <div class="smallTitle collectionTitle">이 작품이 담긴 컬렉션</div>
                     </div>
                     <!-- 비슷한 작품 -->
                     <div class="similarWork">
-                        <div class="smallTitle">비슷한 작품</div>
+                        <div class="smallTitle similarTitle">비슷한 작품</div>
+                        <ul class="similarContentUl">
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                            <li class="similarContent">
+                                <img src="https://picsum.photos/200/300/" alt="이미지가 없습니다">
+                                <div class="similarText">
+                                    <div class="similarTextTitle">치킨 리틀</div>
+                                    <div class="similarTextRate">평균 ★3.1</div>
+                                    <div class="similarTextGenre">영화</div>
+                                </div>
+                            </li>
+                        </ul>
                         <button class="similarSeeMore">더보기</button>
                     </div>
                 </div>
@@ -290,11 +431,24 @@
                 <!-- 갤러리, 동영상 -->
                 <div class="section2GVContainer">
                     <div class="gvContent">
+                        
                         <div class="gallery">
+                            <div class="gvChevron chevron">
+                                <i class="fas fa-chevron-right gvchRight"></i>
+                                <i class="fas fa-chevron-left gvchLeft"></i>
+                            </div>
                             <div class="galleryTitle">갤러리</div>
-                            <img class="galleryImg" src="https://picsum.photos/400/200/" alt="이미지가 없습니다">
+                            <div class="galleryImages">
+                                <img class="galleryImg" src="https://picsum.photos/400/200/" alt="이미지가 없습니다">
+                                <img class="galleryImg" src="https://picsum.photos/400/200/" alt="이미지가 없습니다">
+                                <img class="galleryImg" src="https://picsum.photos/400/200/" alt="이미지가 없습니다">
+                            </div>
                         </div>
                         <div class="video">
+                            <div class="gvChevron chevron">
+                                <i class="fas fa-chevron-right gvchRight"></i>
+                                <i class="fas fa-chevron-left gvchLeft"></i>
+                            </div>
                             <div class="videoTitle">동영상</div>
                             <iframe class="videoVideo" src="https://www.youtube.com/embed/5stAKpukFf8"
                             title="YouTube video player" frameborder="0"

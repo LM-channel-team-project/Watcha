@@ -1,35 +1,62 @@
-﻿const rightArrow = document.querySelector('.fa-chevron-right');
-const leftArrow = document.querySelector('.fa-chevron-left');
+﻿// chevron
+const rightArrow = document.querySelectorAll('.fa-chevron-right');
+const leftArrow = document.querySelectorAll('.fa-chevron-left');
+const apchRight = document.querySelector('.apchRight');
+const apchLeft = document.querySelector('.apchLeft');
+const ccchRight = document.querySelector('.ccchRight');
+const ccchLeft = document.querySelector('.ccchLeft');
+const chevron = document.querySelectorAll('.chevron');
+
 const appearanceProduction = document.querySelector('.appearanceProduction');
 const productionUl = document.querySelector('.production');
 const productionLi = document.querySelector('.productionList');
-const chevron = document.querySelector('.chevron');
+const commentUl = document.querySelector('.commentContentSpace');
 const body = document.querySelector('body');
 
 let count = 0;
 
-appearanceProduction.addEventListener('click', (e)=>{
-    const target = e.target;
-    if(target.classList.contains('fa-chevron-right')){
-        count = count - 60.4;
-        
-        productionUl.style.transform = `translate(${count}rem)`;
+function onProductionRightChevron() {
+    count = count - 60.4;
+    productionUl.style.transform = `translateX(${count}rem)`;
+}
+
+function onProductionLeftChevron() {
+    count = count + 60.4;
+    productionUl.style.transform = `translateX(${count}rem)`;
+}
+
+function onCommentRightChevron() {
+    count = count - 60.4;
+    commentUl.style.transform = `translateX(${count}rem)`;
+}
+
+function onCommentLeftChevron() {
+    count = count + 60.4;
+    commentUl.style.transform = `translateX(${count}rem)`;
+}
+
+
+// 슬라이드
+body.addEventListener('click', (e)=>{
+    const targets = e.target.classList.value.split(" ");
+    for(const target of targets){
+        switch(target){
+            case 'apchRight':
+                onProductionRightChevron();
+                break;
+            case 'apchLeft':
+                onProductionLeftChevron();
+                break;
+            case 'ccchRight':
+                onCommentRightChevron();
+                break;
+            case 'ccchLeft':
+                onCommentLeftChevron();
+                break;
+        }
     }
-    if(target.classList.contains('fa-chevron-left')){
-        count = count + 60.4;
-        productionUl.style.transform = `translate(${count}rem)`;
-    }
+
 })
 
-console.log(appearanceProduction.clientWidth);
 
 
-
-
-productionUl.addEventListener('mouseover', ()=>{
-    chevron.style.visibility = "visible";
-})
-
-// appearanceProduction.addEventListener('mouseout', ()=>{
-//     chevron.style.visibility = "hidden";
-// })
