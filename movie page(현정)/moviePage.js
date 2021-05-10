@@ -21,12 +21,33 @@ const galleryImages = document.querySelector('.galleryImages');
 const videos = document.querySelector('.videos');
 const collectionContentUl = document.querySelector('.collectionContentUl');
 
+// icon
+const faCaretDown = document.querySelector('.fa-caret-down');
+const faPlus = document.querySelector('.fa-plus');
+const emptyBookMarkModal = document.querySelector('.emptyBookMarkModal');
+const fullBookMark = document.querySelector('.fullBookMark');
+const emptyBookMark = document.querySelector('.emptyBookMark');
+
+//modal.button
+const markModal = document.querySelector('.markModal');
+const mark = document.querySelector('.mark');
+const mdCancel = document.querySelector('.mdCancel');
+
+// modal
+const modalBackGround = document.querySelector('.modalBackGround');
+const MDWantToSeeMore = document.querySelector('.MDWantToSeeMore');
+const MDNonMember = document.querySelector('.MDNonMember');
+const mdLeftIconBox = document.querySelector('.mdLeftIconBox');
+
 // button
 const similarSeeMore = document.querySelector('.similarSeeMore');
+const button = document.querySelectorAll('button');
 
 // 비슷한 작품
 const similarWork = document.querySelector('.similarWork');
 const similarContentUl = document.querySelector('.similarContentUl');
+
+
 
 const section2LeftContainer = document.querySelector('.section2LeftContainer');
 const productionLi = document.querySelector('.productionList');
@@ -97,14 +118,80 @@ function onSimilarSeeMoreBtn(){
         similarSeeMore.style.visibility = 'hidden';
     }
     count = count + similarContentUlWidth;
-    console.log(count);
     similarContentUl.style.height = `calc(85.2rem + ${count}rem)`;
     similarWork.style.height = `calc(97.5rem + ${count}rem)`;
 }
 
 
+// modal
+function onModalBtn(){
+    modalBackGround.style.display = 'block';
+    MDWantToSeeMore.style.display = 'block';
+}
+
+function onMdCancelBtn(){
+    modalBackGround.style.display = 'none';
+    MDWantToSeeMore.style.display = 'none';
+    onFullBookMarkModal();
+}
+
+function markBtnColorChange(){
+    mark.style.backgroundColor = '#F6F6F6';
+    mark.style.color = 'black';
+    mark.style.border = 'none';
+    markModal.style.backgroundColor = '#F6F6F6';
+    markModal.style.color = 'black';
+    faCaretDown.style.color = '#D9D9D9';
+}
+
+function emptyToFullBookMarkChange(){
+    emptyBookMarkModal.style.display = 'none';
+    fullBookMark.style.display = 'inline';
+}
+
+function fullToemptyBookMarkChange(){
+    fullBookMark.style.display = 'none';
+    emptyBookMarkModal.style.display = 'inline';
+}
+
+function plusToBookMark(){
+    faPlus.style.display = 'none';
+    emptyBookMark.style.display = 'inline';
+}
+
+function bookMarkToPlus(){
+    emptyBookMark.style.display = 'none';
+    faPlus.style.display = 'inline';
+}
+
+function onEmptyBookMarkModal(){
+    plusToBookMark();
+    emptyToFullBookMarkChange();
+}
+
+function onFullBookMarkModal(){
+    bookMarkToPlus();
+    fullToemptyBookMarkChange();
+}
+
+function onMarkBtn(){
+    if(faPlus.style.display == 'none'){
+        onModalBtn();
+        return;
+    }
+    markBtnColorChange();
+    onEmptyBookMarkModal();
+}
+
+function onfullBookMark(){
+    onMdCancelBtn();
+    fullToemptyBookMarkChange();
+    bookMarkToPlus();
+}
+
+
+
 // addEventListener
-// 슬라이드
 body.addEventListener('click', (e)=>{
     const targets = e.target.classList.value.split(" ");
     for(const target of targets){
@@ -141,6 +228,24 @@ body.addEventListener('click', (e)=>{
                 break;
             case 'similarSeeMore':
                 onSimilarSeeMoreBtn();
+                break;
+            case 'fa-caret-down':
+                onModalBtn();
+                break;
+            case 'markModal':
+                onModalBtn();
+                break;
+            case 'mdCancel':
+                onMdCancelBtn();
+                break;
+            case 'mark':
+                onMarkBtn();
+                break;
+            case 'fullBookMark':
+                onfullBookMark();
+                break;
+            case 'emptyBookMarkModal':
+                onEmptyBookMarkModal();
                 break;
         }
     }
