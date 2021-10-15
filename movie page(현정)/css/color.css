@@ -1,0 +1,17 @@
+﻿:root {
+  --dark-Pink: rgb(231, 18, 82);
+  --hot-Pink: rgb(255, 47, 110);
+  --medium-Pink: rgb(255, 68, 125);
+  --light-Pink: rgb(253, 153, 183);
+  --real-dark-Gray: rgb(74, 74, 74);
+  --medium-dark-Gray: rgb(74, 83, 91);
+  --dark-Gray: rgb(120, 120, 120);
+  --medium-dark-Gray: rgb(169, 160, 160);
+  --medium-Gray: rgb(204, 205, 207);
+  --shadow-Gray: rgb(223, 223, 223);
+  --line-Gray: rgb(227, 227, 227);
+  --backGround-Gray: rgb(248, 248, 248);
+  --hot-Blue: rgb(0, 160, 255);
+  --pure-Black: rgb(0, 0, 0);
+  --pure-White: rgb(255, 255, 255);
+}

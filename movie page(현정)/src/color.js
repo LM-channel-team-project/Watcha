@@ -1,0 +1,12 @@
+﻿'use strict';
+export const hotPink = 'rgb(255,47,110)';
+export const darkGray = 'rgb(120,120,120)';
+export const lightPink = 'rgb(253,153,183)';
+export const white = 'rgb(255,255,255)';
+export const backGroundGray = 'rgb(248,248,248)';
+export const mediumGray = 'rgb(204,205,207)';
+export const lineGray = 'rgb(235,235,235)';
+export const lightGray = 'rgb(246,246,246)';
+export const darkPink = 'rgb(231,18,82)';
+export const blue = 'rgb(0,160,255)';
+export const black = 'rgb(0, 0, 0)';

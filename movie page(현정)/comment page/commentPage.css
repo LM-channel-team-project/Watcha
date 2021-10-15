@@ -1,0 +1,538 @@
+﻿@import url("/movie page(현정)/css/default.css");
+@import url("/movie page(현정)/css/color.css");
+
+html {
+  font-size: 67%;
+}
+
+/* 기본정보 */
+.OVcontents {
+  background: #fff;
+  width: 100vw;
+  height: calc(100vh - 9rem);
+  transform: translateY(9rem);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.OVUl {
+  transform: translateY(1rem);
+  width: 65rem;
+  background: #fff;
+}
+
+.OVLi {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.4rem;
+  background: #fff;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.OVLi p:nth-child(1) {
+  width: 30%;
+  color: #787878;
+}
+
+.OVLastLi {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 8rem;
+}
+
+.OVLastLi p:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 760px) {
+  .OVUl {
+    width: 90vw;
+  }
+}
+
+/* nav */
+.nav {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: #fff;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.nav1,
+.nav2,
+.logoText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav1 {
+  margin-left: 9rem;
+  width: 50vw;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: white;
+  margin-right: 3rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.nav2 {
+  margin-right: 9rem;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.nav2 > i {
+  margin-left: 2rem;
+}
+
+.navSearch {
+  font-size: 3rem;
+  color: #babac3;
+}
+
+.navStar {
+  font-size: 3rem;
+}
+
+.navProfile {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  color: #babac3;
+  border-radius: 50%;
+  /* transform: translateY(0.2rem); */
+}
+
+.nav2 > p {
+  margin-left: 2rem;
+}
+
+.allComments {
+  color: #babac3;
+  display: none;
+}
+
+.navStar {
+  color: #babac3;
+  display: none;
+}
+
+.navEst {
+  color: #babac3;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 1px black;
+  width: 5rem;
+}
+
+.navEst:hover {
+  cursor: pointer;
+}
+
+.logo span:nth-child(1) {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-family: "Andada Pro", serif;
+  text-shadow: 1px 1px 3px black;
+}
+
+.logo span:nth-child(2) {
+  letter-spacing: -2px;
+  text-shadow: 1px 1px 3px black;
+}
+
+.logoText {
+  color: #bec1c0;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.4rem;
+  transition: all 0.5s;
+}
+
+.logoText p {
+  margin-right: 2rem;
+}
+
+.logoText p:hover {
+  cursor: pointer;
+}
+
+.logoMovie {
+  width: 3rem;
+}
+
+.logoTv {
+  width: 7rem;
+}
+
+.logoBook {
+  width: 2rem;
+  margin: 0;
+}
+
+.navSearch {
+  display: none;
+}
+
+.searchBox {
+  width: 28rem;
+  height: 3.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #babac3;
+  font-size: 1.3rem;
+  margin: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+
+.searchBox > i {
+  margin: 0 1rem;
+  color: #bbc2c3;
+}
+
+.searchBox > input {
+  width: 25rem;
+  letter-spacing: 0;
+  background: transparent;
+  caret-color: var(--dark-Gray);
+}
+
+.searchBox > input::placeholder {
+  color: #bbc2c3;
+}
+
+.scrollNav {
+  background: #fff;
+  border: 1px solid var(--line-Gray);
+}
+
+.scrollLogo span:nth-child(1) {
+  color: #ff2f6e;
+  text-shadow: none;
+}
+
+.scrollLogo span:nth-child(2) {
+  color: black;
+  text-shadow: none;
+}
+
+.scrollPro {
+  color: #babac3;
+  background: #f8f8f8;
+  transform: translateY(0.15rem);
+}
+
+.scrollText {
+  text-shadow: none;
+  color: #7e7e7e;
+}
+
+.scrollText p:hover {
+  color: #ff2f6e;
+}
+
+.scrollBox {
+  background: #f5f5f7;
+  border: none;
+}
+
+.scrollBox > input::placeholder {
+  color: #78787e;
+}
+
+.scrollEst {
+  text-shadow: none;
+  color: #78787e;
+}
+
+.scrollSearch {
+  color: #babac3;
+}
+
+/* nav 끝 */
+
+.fa-arrow-left {
+  font-size: 2rem;
+  color: var(--hot-Pink);
+  transition: all 100ms ease-in-out;
+  transform: translateY(-0.2rem);
+}
+
+.fa-arrow-left:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentTop {
+  position: fixed;
+  width: 100%;
+  /* top: 5rem; */
+  left: 0;
+  margin-top: 5rem;
+  height: 3rem;
+  border-bottom: 1px solid #e3e3e3;
+  display: flex;
+  background-color: #fff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem 0 2rem;
+  z-index: 20;
+}
+
+.commentTopText {
+  font-weight: bold;
+  font-size: 1.5rem;
+  transform: translate(43vw, -0.3rem);
+}
+
+.allComments {
+  transform: translateY(8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.allComments div:nth-child(3) {
+  margin-bottom: 3rem;
+}
+
+.commentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  width: 60rem;
+}
+
+.commentBox:nth-child(1) {
+  margin-top: 3rem;
+}
+
+.commentUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 95%;
+}
+
+li,
+.thirdLi {
+  width: 95%;
+  height: 4rem;
+  padding: 0.5rem 0;
+  display: flex;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.firstLi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.connetToMypage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: black;
+}
+
+.photoAndName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.photo {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  color: black;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 20px;
+}
+
+.secondLi {
+  font-size: 1.5rem;
+  height: auto;
+}
+
+.commentText {
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.thirdLi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.3rem;
+}
+
+.fa-thumbs-up,
+.fa-comment {
+  margin-right: 0.5rem;
+  transition: transform 200ms ease-in-out;
+  color: var(--dark-Gray);
+}
+
+.fa-thumbs-up:hover,
+.fa-comment:hover {
+  transform: scale(1.1);
+}
+
+.numOfLikes,
+.numOfComments {
+  margin-right: 1.5rem;
+  cursor: pointer;
+  color: var(--dark-Gray);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 5.5rem;
+  background: #fff;
+  border-top: 1px solid var(--medium-Gray);
+  color: var(--medium-Gray);
+}
+
+.footer div {
+  margin: 0 7vw;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer div:hover {
+  cursor: pointer;
+}
+
+.footer div > i {
+  font-size: 2rem;
+  padding: 0 2rem 0.5rem 2rem;
+}
+
+.footer div > p {
+  font-size: 1.2rem;
+  width: 5rem;
+  text-align: center;
+}
+
+.active {
+  color: black;
+}
+
+@media screen and (max-width: 1080px) {
+  .nav1 {
+    margin-left: 3rem;
+  }
+  .nav2 {
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .searchBox {
+    width: 0;
+    visibility: hidden;
+  }
+  .navEst {
+    display: none;
+  }
+  .navSearch,
+  .navStar {
+    display: block;
+  }
+  .navSearch,
+  .navStar {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav {
+    display: none;
+  }
+  .commentTop {
+    margin-top: 0;
+    top: 0;
+  }
+  .footer {
+    display: flex;
+  }
+  .allComments {
+    transform: translateY(3rem);
+  }
+  .allComments div:nth-child(3) {
+    margin-bottom: 8rem;
+  }
+  .commentBox {
+    width: 92.5vw;
+  }
+  .OVcontents {
+    transform: translateY(4rem);
+  }
+  .OVLastLi {
+    height: 10rem;
+  }
+}

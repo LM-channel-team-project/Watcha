@@ -1,0 +1,209 @@
+﻿html {
+  font-size: 67%;
+}
+
+/* nav */
+.nav {
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: #fff;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.nav1,
+.nav2,
+.logoText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav1 {
+  margin-left: 9rem;
+  width: 50vw;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: white;
+  margin-right: 3rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.nav2 {
+  margin-right: 9rem;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.nav2 > i {
+  margin-left: 2rem;
+  font-size: 3rem;
+}
+
+.nav2 > p {
+  margin-left: 2rem;
+}
+
+.navSearch {
+  color: #babac3;
+  display: none;
+}
+
+.navStar {
+  color: #babac3;
+  display: none;
+}
+
+.navEst {
+  color: #babac3;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 1px black;
+  width: 5rem;
+}
+
+.navEst:hover {
+  cursor: pointer;
+}
+
+.navProfile {
+  color: #babac3;
+  /* border: 1px solid #babac3; */
+  /* border-radius: 50%; */
+}
+
+.logo span:nth-child(1) {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-family: "Andada Pro", serif;
+  text-shadow: 1px 1px 3px black;
+}
+
+.logo span:nth-child(2) {
+  letter-spacing: -2px;
+  text-shadow: 1px 1px 3px black;
+}
+
+.logoText {
+  color: #bec1c0;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.4rem;
+}
+
+.logoText p {
+  margin-right: 2rem;
+}
+
+.logoText p:hover {
+  cursor: pointer;
+}
+
+.logoText p:nth-child(1) {
+  width: 3rem;
+}
+
+.logoText p:nth-child(2) {
+  width: 7rem;
+}
+
+.logoText p:nth-child(3) {
+  width: 2rem;
+  margin: 0;
+}
+
+.searchBox {
+  width: 28rem;
+  height: 3.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #babac3;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.searchBox > i {
+  margin: 0 1rem;
+  color: #bbc2c3;
+}
+
+.searchBox > input {
+  width: 25rem;
+  letter-spacing: 0;
+  background: transparent;
+  caret-color: black;
+}
+
+.searchBox > input::placeholder {
+  color: #bbc2c3;
+}
+
+.scrollNav {
+  background: #fff;
+  border: 1px solid var(--line-Gray);
+}
+
+.scrollLogo span:nth-child(1) {
+  color: #ff2f6e;
+  text-shadow: none;
+}
+
+.scrollLogo span:nth-child(2) {
+  color: black;
+  text-shadow: none;
+}
+
+.scrollPro {
+  color: #f8f8f8;
+  border: 0.5px solid #f8f8f8;
+}
+
+.scrollText {
+  text-shadow: none;
+  color: #7e7e7e;
+}
+
+.scrollText p:hover {
+  color: #ff2f6e;
+}
+
+.scrollBox {
+  background: #f5f5f7;
+  border: none;
+}
+
+.scrollBox > input::placeholder {
+  color: #78787e;
+}
+
+.scrollEst {
+  text-shadow: none;
+  color: #78787e;
+}
+
+@media screen and (max-width: 880px) {
+  .searchBox,
+  .navEst {
+    display: none;
+  }
+  .navSearch,
+  .navStar {
+    display: block;
+  }
+  .nav2 > i {
+    font-size: 2rem;
+  }
+}
